@@ -2,6 +2,7 @@
 
 namespace Gitnik\JmsTypedPropertiesDriver\Tests\Stubs;
 
+use JMS\Serializer\Annotation\Exclude;
 use JMS\Serializer\Annotation\Type;
 
 class Car {
@@ -10,4 +11,6 @@ class Car {
     public string $color;
     /** @Type("DateTime<'Y-m-d'>") */
     public \DateTime $releaseDate;
+    /** @Exclude() */
+    public string $hidden;
 }
